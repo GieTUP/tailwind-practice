@@ -2,37 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log-in</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="bg-white shadow">
-    <section class="flex items-center justify-center h-screen">
-      <div class="grid grid-cols-1 bg-red-600 shadow h-3/6 w-4/12 border-solid border-2 border-red-600 shadow rounded-3xl shadow-inner" >
-        <form>
-          <label class="block">
-            <span class="block text-sm text-white font-medium text-slate-700">Student ID:
-              <input type="text" class="peer..." placeholder="Enter student ID...">
-              <p class="mt-2 invisible peer-invalid:visible text-red-600 text-sm">Provide a valid student ID</p>
-            </span>
+  <body class="relative h-screen">
+    <section class="blur-background flex items-center justify-center h-screen px-4">
+      <div class="bg-gray-500 bg-opacity-55 border-white border-2 grid-cols-1 h-auto w-full sm:w-8/12 md:w-6/12 lg:w-4/12 max-w-md p-6 rounded-3xl shadow-inner">
+        <form class="grid grid-cols-1 grid-rows-4 space-y-4">
+          
+          <!-- Student ID -->
+          <label class="flex flex-col">
+            <span class="block text-lg text-white font-medium">Student ID:</span>
+            <input type="text" class="peer bg-black border-2 rounded-full pl-4 py-2 text-white" placeholder="Enter student ID..." />
+            <p class="mt-2 invisible peer-invalid:visible text-red-600 text-sm">Provide a valid student ID</p>
           </label>
 
-          <label class="block"></label>
-            <span class="block text-sm text-white font-medium text-slate-700">Password:
-              <input type="password" class="peer..." placeholder="Enter password...">
-              <p class="mt-2 invisible peer-invalid:visible text-red-600 text-sm">Provide a password</p>
-            </span>
+          <!-- Password -->
+          <label class="flex flex-col">
+            <span class="block text-lg text-white font-medium">Password:</span>
+            <input type="password" class="peer bg-black border-2 rounded-full pl-4 py-2 text-white" placeholder="Enter password..." />
+            <p class="mt-2 invisible peer-invalid:visible text-red-600 text-sm">Provide a password</p>
           </label>
 
-          <label class="block"></label>
-            <span class="block text-sm text-white font-medium text-slate-700">Birthday:
-              <input type="date" class="peer..." placeholder="Enter birthday...">
-              <p class="mt-2 invisible peer-invalid:visible text-red-600 text-sm">Provide a birthday</p>
-            </span>
+          <!-- Birthday -->
+          <label class="flex flex-col">
+            <span class="block text-lg text-white font-medium">Birthday:</span>
+            <input type="date" class="peer text-gray-400 bg-black border-2 rounded-full pl-4 py-2 text-white w-full" />
+            <p class="mt-2 invisible peer-invalid:visible text-red-600 text-sm">Provide a birthday</p>
           </label>
 
+          <!-- Submit button -->
+          <label class="flex justify-center">
+            <input type="submit" class="peer text-black bg-white border-2 rounded-full w-48 h-8 font-bold" value="LOG IN" />
+          </label>
         </form>
       </div>
     </section>
+
+    <footer class="bg-black py-6">
+      <div class="container mx-auto px-6 text-center text-gray-600">
+        <p>&copy; 2024 TUP-V WEBPAGE.</p>
+      </div>
+    </footer>
   </body>
 </html>

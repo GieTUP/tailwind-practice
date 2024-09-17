@@ -1,0 +1,10 @@
+.blur-background::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('images/TUP_1_b18e267b0d-1896x800.jpeg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px);
+        z-index: -1;
+      }
