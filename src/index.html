@@ -7,6 +7,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <style>
+    @keyframes example{
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    #imagecontainer{
+       animation: example 10s linear infinite;
+    }
+    
     body::before {
         content: '';
         position: absolute;
@@ -50,7 +62,7 @@
     </header>
 
 <section id="features" class="pt-20">
-    <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">CAMPUSES</h2>
+    <h2 class="text-5xl font-bold text-gray-800 text-center mb-12">CAMPUSES</h2>
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class ="bg-white shadow-md drop-shadow-lg p-6 rounded-lg text-center bg-gradient-to-t from-red-500 to-maroon-500 border-solid border-2 border-red-400">
@@ -88,7 +100,7 @@
     <section id="colleges" class="bg-gray-100 pb-20 pt-10 flex-auto">
         <h1 class="flex justify-center align-middle font-bold text-4xl pb-8">COLLEGES</h1>
         <div class="w-full overflow-x-auto whitespace-nowrap">
-  <div class="flex justify-between items-center space-x-6">
+  <div id="imagecontainer" class="flex justify-between items-center space-x-6">
       <img src="images/tup-logo.png" alt="" class="object-cover flex-none h-64 w-96">
       <img src="images/tup-logo.png" alt="" class="object-cover grow max-h-64">
       <img src="images/tup-logo.png" alt="" class="object-cover flex-none h-64 w-96">
