@@ -3,9 +3,6 @@ package SpeedTestCheck;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class POS {
 
     public static ArrayList<String[]> products = new ArrayList<>();
